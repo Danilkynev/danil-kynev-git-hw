@@ -1,0 +1,35 @@
+Assuming unrestricted shared filesystem usage.
+host: DESKTOP-7CTES40
+Building DAG of jobs...
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                          count
+-------------------------  -------
+all                              1
+generate_star_wars_report        1
+total                            2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Dec 25 10:47:40 2025]
+localrule generate_star_wars_report:
+    output: result.txt
+    jobid: 1
+    reason: Missing output files: result.txt
+    resources: tmpdir=C:\Users\shark\AppData\Local\Temp
+[Thu Dec 25 10:47:40 2025]
+Finished jobid: 1 (Rule: generate_star_wars_report)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Dec 25 10:47:40 2025]
+localrule all:
+    input: result.txt
+    jobid: 0
+    reason: Input files updated by another job: result.txt
+    resources: tmpdir=C:\Users\shark\AppData\Local\Temp
+[Thu Dec 25 10:47:40 2025]
+Finished jobid: 0 (Rule: all)
+2 of 2 steps (100%) done
+Complete log(s): E:\danil-kynev-git-hw\.snakemake\log\2025-12-25T104740.728902.snakemake.log
